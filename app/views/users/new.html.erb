@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User Page</title>
+</head>
+<body>
+    <form action="/users" method="post" accept-charset="utf-8">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <div>
+            <label for="user_username">Username: </label>
+            <input type="text" name="user[username]" id="user_username">
+        </div>
+
+        <div>
+            <label for="user_password">Password: </label>
+            <input type="password" name="user[password]" id="user_password">
+        </div>
+
+        <div>
+            <label for="user_email">Email: </label>
+            <input type="email" name="user[email]" id="user_email">
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
